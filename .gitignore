@@ -1,0 +1,22 @@
+# Model weights — bring-your-own, never commit
+eval/models/*.gguf
+eval/models/*.bin
+eval/models/*.safetensors
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
