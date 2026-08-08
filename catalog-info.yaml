@@ -1,0 +1,24 @@
+# Generated from catalog/fleet.yaml in R055LE/runbook. Do not edit here.
+# Change the source and run `scripts/catalog.py apply`; edits made here
+# are reported as drift and overwritten.
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: agentic-platform-lab
+  annotations:
+    github.com/project-slug: HalcyonOps/agentic-platform-lab
+  tags:
+    - ai-agents
+    - devsecops-labs
+    - kubernetes
+    - lab
+    - multi-tenancy
+    - platform
+    - security
+spec:
+  type: lab
+  lifecycle: experimental
+  owner: R055LE
+  domain: platform
+  system: devsecops-labs
+  tier: 2
