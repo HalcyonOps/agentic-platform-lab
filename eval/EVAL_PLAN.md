@@ -21,7 +21,7 @@ Running vLLM / TGI on CPU would produce misleading numbers. They're designed aro
 
 ## Phase 2 — GPU (later)
 
-**Trigger:** WSL2 CUDA passthrough configured, OR a cloud VM with GPU budgeted.
+**Trigger:** run from a machine with a discrete GPU (one exists in the fleet, not yet scheduled for this), or a cloud VM with GPU budgeted.
 
 **Model class:** 7B–13B parameters, Q4/Q5 quantization. Representative of realistic agent workload.
 
