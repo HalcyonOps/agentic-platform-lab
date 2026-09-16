@@ -20,7 +20,7 @@ The thesis is that the interesting DevSecOps+AI work is not "prompt engineering"
 | vLLM | Phase 2 (GPU-required) | — |
 | TGI | Phase 2 (GPU-required) | — |
 
-**Phase 2 — GPU runtime evaluation.** Blocked on WSL2 GPU passthrough setup. Reruns Phase 1 candidates with a 7B Q4 model and adds vLLM + TGI.
+**Phase 2 — GPU runtime evaluation.** Blocked on hardware — this lab is currently being worked from a CPU-only host. A machine with a discrete GPU exists in the fleet and could pick this phase up later; not scheduled yet. Reruns Phase 1 candidates with a 7B Q4 model and adds vLLM + TGI.
 
 **Phase 3 — the platform itself.** Kyverno admission policies, hardened container image for the chosen runtime, authenticated tool proxy, agent workload wired against the four tools defined in [`TOOLS.md`](TOOLS.md), running end-to-end inside Kind or EKS. Not started.
 
