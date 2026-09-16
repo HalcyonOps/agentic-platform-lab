@@ -1,0 +1,8 @@
+name: qwen2.5-3b-instruct-q4_k_m
+backend: cpu-llama-cpp
+parameters:
+  model: qwen2.5-3b-instruct-q4_k_m.gguf
+context_size: 32768
+f16: false
+template:
+  use_tokenizer_template: true

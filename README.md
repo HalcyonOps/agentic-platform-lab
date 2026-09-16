@@ -10,13 +10,13 @@ The thesis is that the interesting DevSecOps+AI work is not "prompt engineering"
 
 ## Status
 
-**Phase 1 — runtime evaluation (in progress).** CPU-only, 3B Q4 models on a laptop. Charter and rubric closed; two runtimes evaluated, one pending.
+**Phase 1 — runtime evaluation (done).** CPU-only, 3B Q4 models. Charter and rubric closed; all three CPU candidates evaluated.
 
 | Runtime | Status | One-line verdict |
 |---|---|---|
 | [Ollama 0.21.0](eval/results/ollama.md) | Done | Fast, friendly, zero auth, silently clamps 32k context to 2k by default. |
 | [llama.cpp b8833](eval/results/llama-cpp.md) | Done | Faster engine, more hardening levers, `/slots` endpoint leaks live prompts by default. |
-| LocalAI | Pending | — |
+| [LocalAI v4.9.0](eval/results/localai.md) | Done | Best metrics of the three, and the only one that ships an unauthenticated 39-tool admin agent by default. |
 | vLLM | Phase 2 (GPU-required) | — |
 | TGI | Phase 2 (GPU-required) | — |
 
@@ -28,7 +28,7 @@ The thesis is that the interesting DevSecOps+AI work is not "prompt engineering"
 
 The rubric in [`EVAL_RUBRIC.md`](EVAL_RUBRIC.md) weights **safe-by-default** above **hardenable.** A tool that can be locked down with enough configuration is not the same as a tool that ships locked down, because nobody reads config as carefully as they should. Every runtime evaluation in this lab answers the question: *if a competent-but-busy engineer runs the documented default install, are they safe?*
 
-Both Phase 1 candidates fail that question. They fail differently, which is the interesting part — and the failure modes are what the platform layer exists to compensate for.
+All three Phase 1 candidates fail that question. They fail differently, which is the interesting part — and the failure modes are what the platform layer exists to compensate for.
 
 ## Repository layout
 
